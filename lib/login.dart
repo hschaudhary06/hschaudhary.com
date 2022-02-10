@@ -72,8 +72,9 @@ class _LoginState extends State<Login> {
                     height: 45.0,
                   ),
                   InkWell(
-                    onTap: () {
-                      // Navigator.pushNamed(context, MyRoutes.home);
+                    onTap: () async {
+                      await Future.delayed(Duration(seconds: 2));
+                      Navigator.pushNamed(context, MyRoutes.home);
                       setState(() {
                         change = true;
                       });
