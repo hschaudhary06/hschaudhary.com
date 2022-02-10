@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:drower/routes/MyRoutes.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  String name = "";
+  bool change = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +30,7 @@ class Login extends StatelessWidget {
               height: 20.0,
             ),
             Text(
-              "Welcome, Log In",
+              "Welcome, $name",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -37,6 +45,10 @@ class Login extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
+                    onChanged: (value) {
+                      name = value;
+                      setState(() {});
+                    },
                     decoration: InputDecoration(
                       hintText: "Enter username",
                       labelText: "Username",
@@ -59,17 +71,44 @@ class Login extends StatelessWidget {
                   SizedBox(
                     height: 45.0,
                   ),
-                  ElevatedButton(
-                    child: Text("Log in"),
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.deepPurple, // background (button) color
-                      onPrimary: Colors.white, // foreground (text) color
-                      minimumSize: Size(170, 50),
-                    ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, MyRoutes.home);
+                  InkWell(
+                    onTap: () {
+                      // Navigator.pushNamed(context, MyRoutes.home);
+                      setState(() {
+                        change = true;
+                      });
                     },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      width: change?150:170,
+                      height: 50,
+                      alignment: Alignment.center,
+                      child:
+                        change
+                        ? Image.asset("assets/images/loder1.gif",height: 30,)
+                        : Text("Log In",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
                   )
+                  // ElevatedButton(
+                  //   child: Text("Log in"),
+                  //   style: ElevatedButton.styleFrom(
+                  //     primary: Colors.deepPurple, // background (button) color
+                  //     onPrimary: Colors.white, // foreground (text) color
+                  //     minimumSize: Size(170, 50),
+                  //   ),
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, MyRoutes.home);
+                  //   },
+                  // )
                 ],
               ),
             )
