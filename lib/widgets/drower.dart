@@ -12,7 +12,7 @@ class MyDrower extends StatelessWidget {
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                   margin: EdgeInsets.zero,
-                  currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("assets/images/login.png"),),
+                  currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("assets/images/hsc.jpeg"),),
                   accountName: Text("Hs Chaudhary"),
                   accountEmail: Text("hschaudhary06@gmail.com",
                   )
