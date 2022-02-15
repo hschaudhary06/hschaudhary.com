@@ -41,7 +41,7 @@ class _LoginState extends State<Login> {
         });
       }
       else{
-        error = "Username Or Password are wrong";
+        error = "Username Or Password is wrong";
       }
     }
   }

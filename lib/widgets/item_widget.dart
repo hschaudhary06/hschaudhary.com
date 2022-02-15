@@ -10,10 +10,13 @@ class ItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-          leading: Image.network(item.img),
+          onTap: () {
+            print(item.id);
+          },
+          leading: Image.asset(item.img),
           title: Text(item.name,textScaleFactor: 1.1,),
           subtitle: Text(item.des),
-          trailing: Text("\₹ ${item.price}", 
+          trailing: Text("₹ ${item.price}", 
           textScaleFactor: 1.2,
           style: TextStyle(
             color: Colors.deepPurple,
