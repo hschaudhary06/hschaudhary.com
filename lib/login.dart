@@ -12,17 +12,37 @@ class _LoginState extends State<Login> {
   String name = "";
   bool change = false;
   final _form_key = GlobalKey<FormState>();
+  final username = TextEditingController();
+  final password = TextEditingController();
+
+  String _username = "";
+  String _password = "";
+  String error = "";
+
+  void _setText() {
+    setState(() {
+      _username = username.text;
+      _password = password.text;
+    });
+  }
 
   moveToHome(BuildContext context) async {
+    _setText();
     if (_form_key.currentState!.validate()) {
-      setState(() {
-        change = true;
-      });
-      await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.home);
-      setState(() {
-        change = false;
-      });
+      if (_username == "haidar" && _password == "haidarali") {
+        error = "Log in successfull";
+        setState(() {
+          change = true;
+        });
+        await Future.delayed(Duration(seconds: 1));
+        await Navigator.pushNamed(context, MyRoutes.home);
+        setState(() {
+          change = false;
+        });
+      }
+      else{
+        error = "Username Or Password are wrong";
+      }
     }
   }
 
@@ -53,6 +73,13 @@ class _LoginState extends State<Login> {
             SizedBox(
               height: 20.0,
             ),
+            Text(
+              error,
+              style: TextStyle(
+                color: change?Colors.green:Colors.red,
+                fontSize: 15,
+              ),
+            ),
             Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 20.0, horizontal: 34.0),
@@ -61,6 +88,7 @@ class _LoginState extends State<Login> {
                 child: Column(
                   children: [
                     TextFormField(
+                      controller: username,
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Username must be not empty";
@@ -83,6 +111,7 @@ class _LoginState extends State<Login> {
                       height: 30.0,
                     ),
                     TextFormField(
+                      controller: password,
                       validator: (value) {
                         if (value!.isEmpty) {
                           return "Password must be not empty";

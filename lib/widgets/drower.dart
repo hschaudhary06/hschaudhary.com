@@ -27,31 +27,31 @@ class MyDrower extends StatelessWidget {
             },
             leading: Icon(
               CupertinoIcons.home,
-              color: Colors.black,
+              // color: Colors.black,
             ),
             title: Text(
               "Home",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),
             ),
           ),
           ListTile(
             leading: Icon(
-              CupertinoIcons.info_circle,
-              color: Colors.black,
+              CupertinoIcons.question_circle,
+              // color: Colors.black,
             ),
             title: Text(
               "About",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),
             ),
           ),
           ListTile(
             leading: Icon(
               CupertinoIcons.mail,
-              color: Colors.black,
+              // color: Colors.black,
             ),
             title: Text(
               "Email",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600),
             ),
           ),
           ListTile(
@@ -59,22 +59,12 @@ class MyDrower extends StatelessWidget {
               Navigator.pushNamed(context, MyRoutes.login);
             },
             leading: Icon(
-              CupertinoIcons.profile_circled,
-              color: Colors.black,
-            ),
-            title: Text(
-              "Log in",
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-          ListTile(
-            leading: Icon(
               CupertinoIcons.square_arrow_left,
-              color: Colors.black,
+              // color: Colors.black,
             ),
             title: Text(
               "Log out",
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 16,fontWeight: FontWeight.w600)
             ),
           )
         ],
