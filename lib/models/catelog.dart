@@ -1,105 +1,5 @@
 class CatelogModal {
-  static final Items = [
-    Item(
-        id: 1,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img: 'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 2,
-        name: 'Laptop',
-        des:
-            'Macbook pro laptop for student',
-        price: 120000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 3,
-        name: 'Ear buds',
-        des:
-            'The earbuds is a iphone prduct',
-        price: 20000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 4,
-        name: 'Oppo A7',
-        des:
-            'Oppo a7 is a very nice phone',
-        price: 15000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 5,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 6,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 7,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 8,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 9,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    ),
-    Item(
-        id: 10,
-        name: 'iphone 12 Pro',
-        des:
-            'The Pro camera system takes low-light photography to on iPhone 12 Pro Max',
-        price: 64000,
-        color: '#33505a',
-        img:
-            'assets/images/iphone_12_pro.jpg'
-    )
-  ];
+  static List<Item> Items = [];
 }
 
 class Item {
@@ -117,4 +17,24 @@ class Item {
       this.price = 0,
       this.color = 'null',
       this.img = 'null'});
+
+  factory Item.fromMap(Map<String,dynamic> map){
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      des: map["des"],
+      price: map["price"],
+      color: map["color"],
+      img: map["img"],
+    );
+  }
+
+  toMap() => {
+      "id": id,
+      "name": name,
+      "des": des,
+      "price": price,
+      "color":color,
+      "img": img
+  };
 }

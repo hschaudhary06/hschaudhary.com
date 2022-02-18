@@ -132,7 +132,7 @@ class _LoginState extends State<Login> {
                       height: 45.0,
                     ),
                     Material(
-                        color: Colors.deepPurple,
+                        color: change?Colors.white:Colors.deepPurple,
                         borderRadius: BorderRadius.circular(70),
                         child: InkWell(
                           onTap: () => moveToHome(context),
@@ -142,10 +142,7 @@ class _LoginState extends State<Login> {
                             height: 50,
                             alignment: Alignment.center,
                             child: change
-                                ? Image.asset(
-                                    "assets/images/loder1.gif",
-                                    height: 30,
-                                  )
+                                ? CircularProgressIndicator()
                                 : Text(
                                     "Log In",
                                     style: TextStyle(
