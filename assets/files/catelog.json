@@ -1,0 +1,94 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 2,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 3,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 4,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 5,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 6,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 7,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 8,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 9,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        },
+        {
+            "id": 10,
+            "name": "iphone 12 Pro",
+            "des":
+                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+            "price": 64000,
+            "color": "#33505a",
+            "img": "assets/images/iphone_12_pro.jpg"
+        }
+    ]
+}
