@@ -2,93 +2,85 @@
     "products": [
         {
             "id": 1,
-            "name": "iphone 12 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
+            "name": "iPhone 12 Pro",
+            "des": "Apple iPhone 12th generation",
+            "price": 999,
             "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021661000"
         },
         {
             "id": 2,
-            "name": "iphone 11 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "Pixel 5",
+            "des": "Google Pixel phone 5th generation",
+            "price": 699,
+            "color": "#00ac51",
+            "img": "https://www.telstra.com.au/content/dam/tcom/lego/2020/plans-devices/mobiles/google-pixel-5/shared-google-pixel-5-black-05-900x1200.png"
         },
         {
             "id": 3,
-            "name": "iphone 10 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "M1 Macbook Air",
+            "des": "Apple Macbook air with apple silicon",
+            "price": 1099,
+            "color": "#e0bfae",
+            "img": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP825/macbookair.png"
         },
         {
             "id": 4,
-            "name": "iphone 9 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "M1 Macbook Air",
+            "des": "Apple Macbook air with apple silicon",
+            "price": 1099,
+            "color": "#e0bfae",
+            "img": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP825/macbookair.png"
         },
         {
             "id": 5,
-            "name": "iphone 8 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "Airpods Pro",
+            "des": "Apple Aipods Pro 1st generation",
+            "price": 200,
+            "color": "#e3e4e9",
+            "img": "https://crdms.images.consumerreports.org/c_lfill,w_598/prod/products/cr/models/400116-wireless-portable-headphones-apple-airpods-pro-10009323.png"
         },
         {
             "id": 6,
-            "name": "iphone 7 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "iPad Pro",
+            "des": "Apple iPad Pro 2020 edition",
+            "price": 799,
+            "color": "#f73984",
+            "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-12-select-wifi-silver-202003_FMT_WHH?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1583551131102"
         },
         {
             "id": 7,
-            "name": "iphone 6 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "Galaxy S21 Ultra",
+            "des": "Samsung Galaxy S21 Ultra 2021 edition",
+            "price": 1299,
+            "color": "#1c1c1c",
+            "img": "https://lh3.googleusercontent.com/qRQPjHrhRVIs-xnfNSyiPXOH2vH97ylMacgbTKebqJtRfNH3LlYo8pN-5igsLDWUH62tGl5zNpTsl5xd8SprzGmXoCEmWFOi2-2cQVGS-r3PaRXHt62DmJHq-jrYX0UQvWZ9BA=s800-c"
         },
         {
             "id": 8,
-            "name": "iphone 5 Pro",
-            "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
-            "price": 64000,
-            "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "name": "Galaxy S21",
+            "des": "Samsung Galaxy S21 2021 edition",
+            "price": 899,
+            "color": "#7c95eb",
+            "img": "https://images.samsung.com/is/image/samsung/p6pim/za/galaxy-s21/gallery/za-clear-cover-galaxy-s21-5g-ef-qg991ttegww-363168624?$720_576_PNG$"
         },
         {
             "id": 9,
             "name": "iphone 4 Pro",
             "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+                "Apple iPhone 12th generation",
             "price": 64000,
             "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021661000"
         },
         {
             "id": 10,
             "name": "iphone 3 Pro",
             "des":
-                "The Pro camera system takes low-light photography to on iPhone 12 Pro Max",
+                "Apple iPhone 12th generation",
             "price": 64000,
             "color": "#33505a",
-            "img": "assets/images/iphone_12_pro.jpg"
+            "img": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021661000"
         }
     ]
 }

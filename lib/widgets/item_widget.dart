@@ -13,7 +13,7 @@ class ItemWidget extends StatelessWidget {
           onTap: () {
             print(item.id);
           },
-          leading: Image.asset(item.img),
+          leading: Image.network(item.img),
           title: Text(item.name,textScaleFactor: 1.1,),
           subtitle: Text(item.des),
           trailing: Text("₹ ${item.price}", 
