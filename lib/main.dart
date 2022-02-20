@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:drower/cart_page.dart';
 import 'package:drower/models/catelog.dart';
 import 'package:drower/routes/MyRoutes.dart';
 import 'package:flutter/material.dart';
@@ -24,13 +25,14 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme(context),
       darkTheme: AppTheme.darkTheme(context),
       initialRoute: MyRoutes.home,
       routes: {
         MyRoutes.login : (context) => Login(),
         MyRoutes.home : (context) => HomePage(),
+        MyRoutes.cart : (context) => CartPage(),
       },
     );
   }

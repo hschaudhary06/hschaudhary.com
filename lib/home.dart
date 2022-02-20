@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:drower/home_widgets/Catalog_list.dart';
+import 'package:drower/routes/MyRoutes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -43,9 +44,7 @@ class _HomePageState extends State<HomePage> {
     // final dumyList = List.generate(30, (index) => CatelogModal.Items[0]);
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          showToastMessage("It's pressed");
-        },
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cart),
         backgroundColor: AppTheme.darkBluishColor,
         child: Icon(CupertinoIcons.cart),
       ),

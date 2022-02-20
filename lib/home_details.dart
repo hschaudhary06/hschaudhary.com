@@ -33,7 +33,7 @@ class HomeDetail extends StatelessWidget {
                   ),
                   shape: MaterialStateProperty.all(StadiumBorder()),
                 ),
-                child: "Buy".text.make()
+                child: "Add".text.make()
               ).wh(80, 40),
           ],
         ).p16(),
