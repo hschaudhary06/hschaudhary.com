@@ -67,11 +67,15 @@ class _CartListState extends State<_CartList> {
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return _cart.items.isEmpty?"Your Cart Is Empty!".text.xl3.makeCentered(): ListView.builder(
       itemCount: _cart.items.length,
       itemBuilder: (context,index) => ListTile(
         leading: Icon(Icons.done),
-        trailing: IconButton(onPressed: (){}, icon: Icon(Icons.delete)),
+        trailing: IconButton(
+          onPressed: (){
+            _cart.remove(_cart.items[index]);
+            setState(() { });
+          }, icon: Icon(Icons.delete)),
         title: _cart.items[index].name.text.make(),
       ),
       

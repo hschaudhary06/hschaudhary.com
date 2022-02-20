@@ -1,16 +1,21 @@
 import 'package:drower/models/catelog.dart';
 
 class CartModel {
-  late CatelogModal _catalog;
+  static final cartModel = CartModel._internal();
 
+  CartModel._internal();
+
+  factory CartModel() => cartModel;
+
+  CatalogModel _catalog = CatalogModel();
+ 
   final List<int> _itemIDs = [];
 
   // get catalog
-  CatelogModal get catalog => _catalog;
+  CatalogModel get catalog => _catalog;
 
   // set catalog
-  set catalog(CatelogModal newCatalog){
-    assert(newCatalog != null);
+  set catalog(CatalogModel newCatalog){
     _catalog = newCatalog;
   }
 

@@ -6,6 +6,8 @@ import 'package:drower/home_widgets/Catalog_img.dart';
 import 'package:drower/models/catelog.dart';
 import 'package:drower/widgets/theme.dart';
 
+import 'add_to_cart.dart';
+
 class CatalogList extends StatelessWidget {
   const CatalogList({Key? key}) : super(key: key);
 
@@ -13,9 +15,9 @@ class CatalogList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: CatelogModal.Items.length,
+      itemCount: CatalogModel.Items.length,
       itemBuilder: (context, index) {
-        final catalog = CatelogModal.Items[index];
+        final catalog = CatalogModel.Items[index];
         return InkWell(
           onTap: () => Navigator.push(
             context, 
@@ -68,34 +70,5 @@ class CatalogItem extends StatelessWidget {
         ))
       ],
     )).white.rounded.square(130).make().py16();
-  }
-}
-
-class AddToCart extends StatefulWidget {
-  final Item catalog;
-  const AddToCart({
-    Key? key,
-    required this.catalog,
-  }) : super(key: key);
-  @override
-  State<AddToCart> createState() => _AddToCartState();
-}
-
-class _AddToCartState extends State<AddToCart> {
-  bool isAdded=false;
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        isAdded = isAdded.toggle();
-        setState(() { });
-      }, 
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(
-          AppTheme.darkBluishColor,
-        ),
-        shape: MaterialStateProperty.all(StadiumBorder()),
-      ),
-      child: isAdded?Icon(Icons.done):"Add".text.make());
   }
 }
