@@ -1,3 +1,4 @@
+import 'package:drower/home_details.dart';
 import 'package:drower/home_widgets/Catalog_img.dart';
 import 'package:drower/models/catelog.dart';
 import 'package:drower/widgets/theme.dart';
@@ -15,7 +16,15 @@ class CatalogList extends StatelessWidget {
       itemCount: CatelogModal.Items.length,
       itemBuilder: (context, index) {
         final catalog = CatelogModal.Items[index];
-        return CatalogItem(catalog: catalog);
+        return InkWell(
+          onTap: () => Navigator.push(
+            context, 
+            MaterialPageRoute(
+              builder: (context) => HomeDetail(catalog: catalog),
+              ),
+          ),
+          child: CatalogItem(catalog: catalog),
+          );
       },
     );
   }
@@ -35,7 +44,10 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
         child: Row(
       children: [
-        CatalogImg(image: catalog.img),
+        Hero(
+          tag: Key(catalog.id.toString()),
+          child: CatalogImg(image: catalog.img
+          )),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
