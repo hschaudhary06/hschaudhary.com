@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^2.2.0
   velocity_x: ^1.4.1
+  fluttertoast: ^8.0.8
   http:
 
 dev_dependencies:

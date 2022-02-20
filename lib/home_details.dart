@@ -1,4 +1,5 @@
 import 'package:drower/widgets/theme.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:drower/models/catelog.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -14,7 +15,9 @@ class HomeDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme.creamColor,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
@@ -58,6 +61,10 @@ class HomeDetail extends StatelessWidget {
                         .make(),
                     catalog.des.text.lg.textStyle(context.captionStyle).make(),
                     10.heightBox,
+                    "Aliquyam dolor et erat justo lorem aliquyam takimata no dolore. Aliquyam dolores vero sit no dolor invidunt invidunt et. Dolor."
+                    .text
+                    .textStyle(context.captionStyle)
+                    .make().p16()
                   ],
                 ).py64(),
               ),

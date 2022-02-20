@@ -4,6 +4,7 @@ import 'package:drower/home_widgets/Catalog_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'package:drower/models/catelog.dart';
@@ -41,6 +42,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final dumyList = List.generate(30, (index) => CatelogModal.Items[0]);
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          showToastMessage("It's pressed");
+        },
+        backgroundColor: AppTheme.darkBluishColor,
+        child: Icon(CupertinoIcons.cart),
+      ),
       backgroundColor: AppTheme.creamColor,
       body: SafeArea(
         child: Container(
@@ -62,6 +70,17 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
+void showToastMessage(String message){
+    Fluttertoast.showToast(
+            msg: message,
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.black,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
+}
 /* ListView.builder(
             itemCount: CatelogModal.Items.length,
             itemBuilder: (context, index) =>
