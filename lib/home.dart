@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:drower/core/store.dart';
 import 'package:drower/home_widgets/Catalog_list.dart';
+import 'package:drower/models/cart.dart';
 import 'package:drower/routes/MyRoutes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +16,7 @@ import 'package:drower/widgets/theme.dart';
 
 import 'home_widgets/Catalog_header.dart';
 import 'widgets/item_widget.dart';
+import 'package:http/http.dart' as http ;
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -23,6 +26,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final url = "http://192.168.43.164/api/api.php?action=test";
   @override
   void initState() {
     super.initState();
@@ -32,6 +36,8 @@ class _HomePageState extends State<HomePage> {
   loadData() async {
     await Future.delayed(Duration(seconds: 2));
     var Json = await rootBundle.loadString("assets/files/catelog.json");
+    // var response = await http.get(Uri.parse(url),headers: {});
+    // var Json = response.body;
     var decodedData = jsonDecode(Json);
     var product = decodedData["products"];
     CatalogModel.Items =
@@ -41,12 +47,18 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // final dumyList = List.generate(30, (index) => CatelogModal.Items[0]);
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Navigator.pushNamed(context, MyRoutes.cart),
-        backgroundColor: AppTheme.darkBluishColor,
-        child: Icon(CupertinoIcons.cart),
+      floatingActionButton: VxBuilder(
+        mutations: {AddMutation,RemoveMutation},
+        builder: (context,_) => FloatingActionButton(
+          onPressed: () => Navigator.pushNamed(context, MyRoutes.cart),
+          backgroundColor: AppTheme.darkBluishColor,
+          child: Icon(CupertinoIcons.cart),
+        ).badge(color: Colors.red[400],size: 20,count: _cart.items.length,textStyle: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold)
+          ),
       ),
       backgroundColor: AppTheme.creamColor,
       body: SafeArea(
