@@ -2,6 +2,7 @@ import 'package:drower/widgets/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:drower/models/catelog.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:velocity_x/velocity_x.dart';
 
 import 'home_widgets/add_to_cart.dart';
